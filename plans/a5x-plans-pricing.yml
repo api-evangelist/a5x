@@ -1,0 +1,24 @@
+generated: '2026-09-05'
+method: searched
+source: https://a5x.com.br/en/services/
+plan_count: 0
+plans: []
+note: >-
+  A5X publishes no public pricing, plan or fee-schedule page. The site's Services, Connectivity and
+  Colocation pages describe the access models (site-to-site VPN, LAN-to-LAN, cross connect at Equinix
+  SP3, AWS Direct Connect / VPC peering, and the A5X Connectivity Network) without any price,
+  tier or quota. The public /docs/ archive contains three "Documentacao sobre faturamento"
+  (billing documentation) entries, but their published bodies are placeholder text ("Passo 1... Passo
+  2...") with a dead PDF download, so no fee data can be read from them. A5X's own Dev Portal
+  announcement says pricing and billing structures are documented inside the technical portal, which
+  requires a login. As a pre-launch exchange (operations targeted for 2026) this is an
+  institutional, contract-negotiated commercial model rather than self-serve plans.
+evidence:
+- url: https://a5x.com.br/en/services/
+  status: 200
+- url: https://a5x.com.br/en/connectivity/
+  status: 200
+- url: https://a5x.com.br/docs/documentacao-sobre-faturamento/
+  status: 200
+- url: https://portal-tecnico.a5x.com.br/login
+  status: 200

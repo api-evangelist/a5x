@@ -1,23 +1,116 @@
 aid: a5x
-name: A5x
-description: 'A5x is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: A5X
+description: >-
+  A5X S.A. is a next-generation derivatives and futures exchange and clearing house being built for
+  the Brazilian market, founded in 2023 in Sao Paulo by former XP executives Carlos Ferreira Filho and
+  Karel Luketic together with Nilson Monteiro (Ideal) and Julian Chediak. It is an asset-light,
+  technology-first venue running on London Stock Exchange Group trading, clearing and market
+  surveillance technology, and it has raised R$385 million (about USD 72.6 million) from investors
+  including IMC Trading, Jump Trading Group, Optiver, XTX Markets and ABN AMRO Clearing. Its listed,
+  financially settled contract set covers stock index futures and options (local and offshore),
+  single stock futures and options, currency futures and options, local interest rate futures and
+  options, and cryptocurrency futures, with European-style options exercised automatically at expiry.
+  For integrators, A5X publishes a technical developer portal covering connectivity (site-to-site VPN,
+  LAN-to-LAN, cross connect at Equinix SP3, AWS Direct Connect), order entry, market data, drop copy
+  and post-trade settlement, allocation, positioning and risk interfaces over FIX and binary
+  protocols. The portal requires a login, so those specifications are not publicly readable.
+image: https://a5x.com.br/wp-content/uploads/2025/07/A5X-Logo-Vetorizado-Azul-1.png
 url: https://raw.githubusercontent.com/api-evangelist/a5x/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
-apis: []
+- Financial Services
+- Capital Markets
+- Stock Exchange
+- Derivatives
+- Futures
+- Trading
+- Market Data
+- Clearing
+- FIX Protocol
+- Brazil
+apis:
+- aid: a5x:a5x-technical-interfaces
+  name: A5X Technical Interfaces
+  description: >-
+    The trading, market data and post-trade interfaces A5X exposes to exchange participants —
+    order entry and drop copy over FIX, a binary market data feed, and post-trade capture,
+    allocation, positioning and risk messaging. Message catalogs, session recovery rules, order
+    identifier formats and field limits are documented in the A5X Dev Portal (Portal Tecnico),
+    which requires credentials; no public machine-readable contract (OpenAPI, AsyncAPI, GraphQL SDL
+    or downloadable FIX dictionary) is published at an anonymous URL, and the exchange had not begun
+    production operations as of this profile.
+  humanURL: https://portal-tecnico.a5x.com.br/login
+  image: https://a5x.com.br/wp-content/uploads/2025/07/A5X-Logo-Vetorizado-Azul-1.png
+  tags:
+  - Trading
+  - Market Data
+  - Post-Trade
+  - FIX Protocol
+  - Derivatives
+  properties:
+  - type: DeveloperPortal
+    url: https://portal-tecnico.a5x.com.br/login
+  - type: Documentation
+    url: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/a5x-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/a5x
+  url: https://a5x.com.br/en/
+- type: DeveloperPortal
+  url: https://portal-tecnico.a5x.com.br/login
+- type: Blog
+  url: https://a5x.com.br/en/blog/
+- type: BlogRSS
+  url: https://a5x.com.br/en/feed/
+- type: Support
+  url: https://a5x.com.br/en/contact-us/
+- type: TermsOfService
+  url: https://a5x.com.br/en/terms-of-use/
+- type: PrivacyPolicy
+  url: https://a5x.com.br/en/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/a5x
+- type: LLMsTxt
+  url: llms/a5x-llms.txt
+- type: Plans
+  url: plans/a5x-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/a5x-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/a5x-lifecycle.yml
+- type: Conformance
+  url: conformance/a5x-conformance.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    Every A5X technical specification — FIX and binary order entry, market data, drop copy, and the
+    post-trade message catalogs — sits inside the Portal Tecnico wiki at portal-tecnico.a5x.com.br,
+    which returns HTTP 403 to every anonymous request for a document path while the public /docs/
+    archive on the marketing site holds only three billing pages whose bodies are placeholder text.
+  evidence:
+  - url: https://portal-tecnico.a5x.com.br/docs
+    status: 403
+  - url: https://portaldev.a5x.com.br/openapi.json
+    status: 403
+  - url: https://a5x.com.br/docs/documentacao-sobre-faturamento/
+    status: 200
+  - url: https://a5x.com.br/.well-known/security.txt
+    status: 404
+  checked: '2026-09-05'

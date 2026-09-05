@@ -1,0 +1,86 @@
+generated: '2026-09-05'
+method: searched
+source: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+note: >-
+  A5X is a pre-launch Brazilian derivatives exchange. No machine-readable contract is published at
+  any anonymous URL, so nothing here is derived from a spec — every entry below is either a
+  first-party statement A5X makes on its own public site, or a recorded absence. The specification
+  documents themselves live in the login-gated Dev Portal (portal-tecnico.a5x.com.br), so the
+  conformance claims cannot be verified against a fetched contract.
+standards:
+- id: fix-protocol
+  name: FIX Protocol
+  conforms: true
+  evidence: >-
+    A5X's own Dev Portal announcement states the trading section documents order entry protocols
+    "including FIX and binary implementations", with specifications covering order identifiers,
+    field character limits and session recovery procedures.
+  evidence_url: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+  evidence_kind: provider-statement
+  contract_access: gated
+  contract_location: https://portal-tecnico.a5x.com.br/login
+- id: binary-order-entry
+  name: Binary order-entry protocol (low latency)
+  conforms: true
+  evidence: >-
+    Same announcement describes binary protocol implementations optimised for low-latency trading
+    alongside the FIX interface. The specific binary encoding (SBE/FIXP or an LSEG Millennium-family
+    native protocol) is not named on any public page.
+  evidence_url: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+  evidence_kind: provider-statement
+  contract_access: gated
+- id: market-data-feed
+  name: Market data distribution
+  conforms: true
+  evidence: >-
+    The Dev Portal is documented as carrying market data message formats, update frequencies and
+    subscription procedures, plus a drop copy surface. The wire format is not named publicly.
+  evidence_url: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+  evidence_kind: provider-statement
+  contract_access: gated
+- id: rest-openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI or Swagger document at any probed path on a5x.com.br, portaldev.a5x.com.br or
+    portal-tecnico.a5x.com.br.
+- id: graphql
+  conforms: false
+  evidence: >-
+    portal-tecnico.a5x.com.br answers anonymous GraphQL introspection, but the schema returned is
+    the stock Wiki.js 2.x content-management API (Page/Asset/Site/Navigation types) belonging to the
+    open-source wiki software A5X runs the portal on, not an A5X exchange interface. Anonymous
+    pages.list returns an empty array. Not recorded as an A5X contract.
+- id: asyncapi
+  conforms: false
+  evidence: No AsyncAPI document found; the event surface is an exchange market-data feed, not webhooks.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    No /.well-known/oauth-authorization-server or /.well-known/openid-configuration on any host; the
+    portal login is a first-party Wiki.js form.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public error contract to evaluate.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on a5x.com.br and 403 on the portal hosts.
+domain_standard:
+  market: capital-markets-exchange
+  standard: FIX Protocol
+  declared: true
+  verified_in_contract: false
+  note: >-
+    FIX is the domain standard for a listed-derivatives venue and A5X declares it in its own
+    developer communications, which is the strongest signal available for a participant deciding
+    whether a bespoke connector is required. It is NOT verified against a fetched contract — the FIX
+    dictionary, message catalog and session rules are inside the gated portal — so this is recorded
+    as declared, not verified.
+evidence:
+- url: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+  status: 200
+- url: https://portal-tecnico.a5x.com.br/graphql
+  status: 200
+- url: https://portal-tecnico.a5x.com.br/docs
+  status: 403
+- url: https://a5x.com.br/.well-known/security.txt
+  status: 404

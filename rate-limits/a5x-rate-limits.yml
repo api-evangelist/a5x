@@ -1,0 +1,17 @@
+generated: '2026-09-05'
+method: searched
+source: https://a5x.com.br/en/connectivity/
+limit_count: 0
+rate_limits: []
+note: >-
+  No published rate limits, throttling policy, message-rate ceilings or response-header contract
+  could be found on any anonymous A5X surface. Exchange order-entry throttles and market-data
+  bandwidth allocations are normally stated in the participant technical specifications; A5X's are
+  in the Dev Portal (portal-tecnico.a5x.com.br), which returns 403 to every anonymous request. The
+  public marketing site documents connectivity options and 24x7 monitoring but states no numeric
+  limit. An honest zero, not an absence of a mechanism.
+evidence:
+- url: https://a5x.com.br/en/connectivity/
+  status: 200
+- url: https://portal-tecnico.a5x.com.br/docs
+  status: 403

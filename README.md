@@ -64,5 +64,15 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-A5x is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/a5x
+A5X S.A. is a next-generation derivatives and futures exchange and clearing house being built for the
+Brazilian market, founded in 2023 in Sao Paulo and running on London Stock Exchange Group trading,
+clearing and market surveillance technology. Its listed, financially settled contract set covers stock
+index, single stock, currency, local interest rate and cryptocurrency futures and options.
+
+Its integration surface — FIX and binary order entry, market data, drop copy, and post-trade capture,
+allocation, positioning and risk messaging — is documented in the A5X Dev Portal (Portal Tecnico), which
+requires a login. No machine-readable contract is published at any anonymous URL. See `x-coverage` in
+`apis.yml`.
+
+- https://a5x.com.br/en/
+- https://portal-tecnico.a5x.com.br/login

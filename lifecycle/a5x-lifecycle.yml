@@ -1,0 +1,54 @@
+generated: '2026-09-05'
+method: searched
+source: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+stage: pre-launch
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    No public versioning policy. A5X states that its Dev Portal carries version-control tracking of
+    the technical specifications, but the portal is login-gated so the scheme cannot be read.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No deprecation or sunset policy is published on any anonymous surface.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No SLA is published. The connectivity page states the infrastructure is monitored 24x7 for
+    capacity, stability and resilience, with no numeric availability commitment.
+status_page: null
+status_page_note: >-
+  No status page found. status.a5x.com.br does not resolve (NXDOMAIN) and no status link appears in
+  the site navigation or footer.
+specification_release_phases:
+- phase: August 2025
+  content: Foundational specifications (connectivity, core message catalogs)
+- phase: September 2025
+  content: Operational features
+- phase: October 2025
+  content: Advanced systems
+  note: >-
+    Phase plan as announced by A5X in its Dev Portal launch post; the documents themselves are
+    behind the portal login and carry a regulatory-approval disclaimer ("Documentos tecnicos em
+    processo de aprovacao regulatoria").
+milestones:
+- date: '2023'
+  event: A5X founded in Sao Paulo
+- date: '2025-06'
+  event: LSEG selected to provide trading, clearing and market surveillance technology
+- date: '2026'
+  event: Targeted start of exchange operations, pending regulatory pre-operational testing
+deprecated_operations: []
+note: >-
+  No StatusPage or Deprecation pointer is emitted — neither surface exists. This file records the
+  pre-launch lifecycle position and the gated location of the versioning contract.
+evidence:
+- url: https://a5x.com.br/en/blog/a5x-en/a5x-dev-portal-provides-specifications-for-developers/
+  status: 200
+- url: https://a5x.com.br/en/connectivity/
+  status: 200
+- url: https://portal-tecnico.a5x.com.br/login
+  status: 200
