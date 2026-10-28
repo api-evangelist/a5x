@@ -1,4 +1,4 @@
-# A5x
+# A5X
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,15 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-A5X S.A. is a next-generation derivatives and futures exchange and clearing house being built for the
-Brazilian market, founded in 2023 in Sao Paulo and running on London Stock Exchange Group trading,
-clearing and market surveillance technology. Its listed, financially settled contract set covers stock
-index, single stock, currency, local interest rate and cryptocurrency futures and options.
+A5X S.A. is a next-generation derivatives and futures exchange and clearing house being built for the Brazilian market, founded in 2023 in Sao Paulo by former XP executives Carlos Ferreira Filho and Karel Luketic together with Nilson Monteiro (Ideal) and Julian Chediak. It is an asset-light, technology-first venue running on London Stock Exchange Group trading, clearing and market surveillance technology, and it has raised R$385 million (about USD 72.6 million) from investors including IMC Trading, Jump Trading Group, Optiver, XTX Markets and ABN AMRO Clearing. Its listed, financially settled contract set covers stock index futures and options (local and offshore), single stock futures and options, currency futures and options, local interest rate futures and options, and cryptocurrency futures, with European-style options exercised automatically at expiry. For integrators, A5X publishes a technical developer portal covering connectivity (site-to-site VPN, LAN-to-LAN, cross connect at Equinix SP3, AWS Direct Connect), order entry, market data, drop copy and post-trade settlement, allocation, positioning and risk interfaces over FIX and binary protocols. The portal requires a login, so those specifications are not publicly readable.
 
-Its integration surface — FIX and binary order entry, market data, drop copy, and post-trade capture,
-allocation, positioning and risk messaging — is documented in the A5X Dev Portal (Portal Tecnico), which
-requires a login. No machine-readable contract is published at any anonymous URL. See `x-coverage` in
-`apis.yml`.
+**Areas:** Company · Financial Services · Capital Markets · Stock Exchange · Derivatives · Futures · Trading · Market Data · Clearing · FIX Protocol · Brazil
 
-- https://a5x.com.br/en/
-- https://portal-tecnico.a5x.com.br/login
+## A5X on APIs.io
+
+Everything profiled for A5X is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/a5x/](https://apis.io/providers/a5x/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [A5X Technical Interfaces](https://apis.io/apis/a5x/a5x-technical-interfaces/) — The trading, market data and post-trade interfaces A5X exposes to exchange participants — order entry and drop copy over FIX, a binary market data feed, and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [A5X Domain Security](https://apis.io/security/a5x/a5x-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [A5X Plans Pricing](https://apis.io/plans/a5x/a5x-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [A5X Rate Limits](https://apis.io/rate-limits/a5x/a5x-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://a5x.com.br/en/)
+- [Support](https://a5x.com.br/en/contact-us/)
+- [Blog](https://a5x.com.br/en/blog/)
+- [Terms of service](https://a5x.com.br/en/terms-of-use/)
+- [Privacy policy](https://a5x.com.br/en/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 18.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.1** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/a5x/](https://apis.io/providers/a5x/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for A5X: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/a5x/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
